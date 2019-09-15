@@ -36,7 +36,7 @@
 <main>
   <h1>Магазин готовых шаблонов</h1>
   <aside>
-    <h2>Фильтры</h2>
+    <h2 class="visually-hidden">Фильтры</h2>
     <form method="get" action="https://echo.htmlacademy.ru">
       <fieldset>
         <legend>Стоимость:</legend>
@@ -47,10 +47,14 @@
             <button class="price-filter__max" type="button"></button>
           </div>
         </div>
-        <label for="min">от</label>
-        <input id="min" type="number"/>
-        <label for="max">до</label>
-        <input id="max" type="number"/>
+        <p>
+          <label for="min">от</label>
+          <input id="min" type="number"/>
+        </p>
+        <p>
+          <label for="max">до</label>
+          <input id="max" type="number"/>
+        </p>
       </fieldset>
       <fieldset>
         <legend>Сетка:</legend>
@@ -74,11 +78,11 @@
         <input type="checkbox" id="checkbox5" name="properties" value="5">
         <label for="checkbox5">Корзина</label>
       </fieldset>
-      <input type="submit" value="Показать">
+      <button type="submit">Показать</button>
     </form>
   </aside>
   <section>
-    <h3>Сортировка продуктов</h3>
+    <h3 class="visually-hidden">Сортировка продуктов</h3>
     <p>Сортировать:</p>
     <ul>
       <li>
@@ -101,7 +105,7 @@
     </ul>
   </section>
   <section>
-    <h3>Список товаров</h3>
+    <h3 class="visually-hidden">Список товаров</h3>
     <ul>
       <li>
         <div>
@@ -173,7 +177,7 @@
   </section>
 </main>
 <section>
-  <h2>Расположение</h2>
+  <h2 class="visually-hidden">Расположение</h2>
   <div class="map__container" id="map"></div>
   <img src="img/map.png" alt="распложение">
   <div>
@@ -186,9 +190,9 @@
 <footer>
   <div>
     <ul>
-      <li><a href="#">Вконтакте</a></li>
-      <li><a href="#">Фейсбук</a></li>
-      <li><a href="#">Инстаграм</a></li>
+      <li><a href="#" aria-label="Нёрдс во Вконтакте"></a></li>
+      <li><a href="#" aria-label="Нёрдс в Фейсбуке"></a></li>
+      <li><a href="#" aria-label="Нёрдс в Инстаграме"></a></li>
     </ul>
   </div>
   <p>Давайте дружить, это выгодно!</p>
@@ -196,8 +200,22 @@
 </footer>
 <section>
   <h2>Напишите нам</h2>
+  <form method="post" action="https://echo.htmlacademy.ru">
+    <p>
+      <label for="name">Ваше имя:</label>
+      <input type="text" id="name" placeholder="Имя Фамилия">
+    </p>
+    <p>
+      <label for="email">Ваш e-mail:</label>
+      <input type="text" id="email" placeholder="email@example.com">
+    </p>
+    <p>
+      <label for="text">Текст письма:</label>
+      <textarea placeholder="В свободной форме" id="text"></textarea>
+    </p>
+    <button type="submit">Отправить</button>
+  </form>
   <button type="button">Закрыть</button>
-  <!--  TODO: form   -->
 </section>
 <script src="js/app.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMap"></script>
