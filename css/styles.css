@@ -25,8 +25,9 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 1200px;
 
-  font-family: Roboto, Tahoma sans-serif;
+  font-family: Roboto, Tahoma, sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #283136;
@@ -63,6 +64,11 @@ header {
   text-transform: uppercase;
 
   background-color: #f2f2f2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .header-menu,
@@ -440,20 +446,6 @@ header {
 }
 /*grid styles*/
 
-html,
-body {
-  min-width: 1440px;
-  /*min-height: 3213px;*/
-}
-/*
-body {
-  !* Временно для сетки *!
-  background-image: url('./../img/nerds-catalog.jpg');
-  background-size: 1440px auto;
-  background-repeat: no-repeat;
-  background-position: top center;
-}*/
-
 .main-header {
   min-height: 118px;
 }
@@ -463,8 +455,6 @@ body {
   justify-content: space-between;
   min-height: 118px;
   background-color: transparent;
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .logo {
@@ -492,16 +482,17 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 1160px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+}
+
+.container-main {
   margin-right: auto;
   margin-left: auto;
   margin-top: 75px;
   margin-bottom: 0;
-}
-
-.slider {
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .slider-list {
@@ -589,16 +580,12 @@ body {
 }
 
 .contacts-wrapper {
-  width: 1200px;
-  margin: 0 auto;
   height: 416px;
 }
 
 .footer-main {
   display: flex;
   min-height: 217px;
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .social {
