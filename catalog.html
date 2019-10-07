@@ -8,13 +8,13 @@
 </head>
 <body class="inner-page">
 <header class="main-header">
-  <nav class="main-navigation">
+  <nav class="main-navigation container">
     <a class="logo" href="/">
       <img src="img/nerds-logo.svg" width="160" height="65" alt="Лого студии Нёрдс">
     </a>
     <ul class="header-menu">
       <li>
-        <a href="#">Студи</a>
+        <a href="#">Студия</a>
       </li>
       <li>
         <a href="#">Клиенты</a>
@@ -28,7 +28,7 @@
     </ul>
     <ul class="service-menu">
       <li>
-        <a href="#">Корзина</a>
+        <a class="service-menu__cart" href="#">Корзина</a>
       </li>
     </ul>
   </nav>
@@ -41,67 +41,65 @@
     <aside class="filters">
       <h2 class="visually-hidden">Фильтры</h2>
       <form method="get" action="https://echo.htmlacademy.ru">
-        <fieldset>
-          <legend>Стоимость:</legend>
-          <div class="price-filter">
-            <div class="price-filter__range">
-              <div class="price-filter__progress"></div>
-              <button class="price-filter__min" type="button"></button>
-              <button class="price-filter__max" type="button"></button>
+        <fieldset class="filters-price filters-block">
+          <legend class="filters-block__title">Стоимость:</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="width: 64%"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+              <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
             </div>
           </div>
-          <p>
-            <label for="min">от</label>
-            <input id="min" type="number"/>
-          </p>
-          <p>
-            <label for="max">до</label>
-            <input id="max" type="number"/>
-          </p>
         </fieldset>
-        <fieldset>
-          <legend>Сетка:</legend>
+        <fieldset class="filters-grid filters-block">
+          <legend class="filters-block__title">Сетка:</legend>
           <ul>
-            <li>
-              <input class="filters-input" type="radio" id="radio1" name="grid" value="1">
-              <label for="radio1">Адаптивная</label>
+            <li class="filters-item">
+              <input class="filters-input visually-hidden" type="radio" id="radio1" name="grid" value="1" checked>
+              <label class="filters-label-radio" for="radio1">Адаптивная</label>
             </li>
-            <li>
-              <input class="filters-input" type="radio" id="radio2" name="grid" value="2">
-              <label for="radio2">Фиксированная</label>
+            <li class="filters-item">
+              <input class="filters-input visually-hidden" type="radio" id="radio2" name="grid" value="2" disabled>
+              <label class="filters-label-radio" for="radio2">Фиксированная</label>
             </li>
-            <li>
-              <input class="filters-input" type="radio" id="radio3" name="grid" value="3">
-              <label for="radio3">Резиновая</label>
+            <li class="filters-item">
+              <input class="filters-input visually-hidden" type="radio" id="radio3" name="grid" value="3">
+              <label class="filters-label-radio" for="radio3">Резиновая</label>
             </li>
           </ul>
         </fieldset>
-        <fieldset>
-          <legend>Особенности:</legend>
+        <fieldset class="filters-properties filters-block">
+          <legend class="filters-block__title">Особенности:</legend>
           <ul>
-            <li>
-              <input class="filters-input" type="checkbox" id="checkbox1" name="properties" value="1">
-              <label for="checkbox1">Слайдер</label>
+            <li class="filters-item">
+              <input class="filters-input visually-hidden" type="checkbox" id="checkbox1" name="properties" value="1" checked>
+              <label class="filters-label-checkbox" for="checkbox1">Слайдер</label>
             </li>
-            <li>
-              <input class="filters-input" type="checkbox" id="checkbox2" name="properties" value="2">
-              <label for="checkbox2">Блок преимуществ</label>
+            <li class="filters-item">
+              <input class="filters-input visually-hidden" type="checkbox" id="checkbox2" name="properties" value="2">
+              <label class="filters-label-checkbox" for="checkbox2">Блок преимуществ</label>
             </li>
-            <li>
-              <input class="filters-input" type="checkbox" id="checkbox3" name="properties" value="3">
-              <label for="checkbox3">Новости</label>
+            <li class="filters-item">
+              <input class="filters-input visually-hidden" type="checkbox" id="checkbox3" name="properties" value="3" checked>
+              <label class="filters-label-checkbox" for="checkbox3">Новости</label>
             </li>
-            <li>
-              <input class="filters-input" type="checkbox" id="checkbox4" name="properties" value="4">
-              <label for="checkbox4">Галерея</label>
+            <li class="filters-item">
+              <input class="filters-input visually-hidden" type="checkbox" id="checkbox4" name="properties" value="4">
+              <label class="filters-label-checkbox" for="checkbox4">Галерея</label>
             </li>
-            <li>
-              <input class="filters-input" type="checkbox" id="checkbox5" name="properties" value="5">
-              <label for="checkbox5">Корзина</label>
+            <li class="filters-item">
+              <input class="filters-input visually-hidden" type="checkbox" id="checkbox5" name="properties" value="5" disabled>
+              <label class="filters-label-checkbox" for="checkbox5">Корзина</label>
             </li>
           </ul>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="btn btn-filters" type="submit">Показать</button>
       </form>
     </aside>
     <div class="store-wrapper">
@@ -109,22 +107,22 @@
         <h3 class="visually-hidden">Сортировка продуктов</h3>
         <p class="sort__title">Сортировать:</p>
         <ul class="sort__types">
-          <li>
+          <li class="sort__item">
             <a class="sort__link sort__link&#45;&#45;active" href="#">По цене</a>
           </li>
-          <li>
+          <li class="sort__item">
             <a class="sort__link" href="#">По типу</a>
           </li>
-          <li>
+          <li class="sort__item">
             <a class="sort__link" href="#">По названию</a>
           </li>
         </ul>
-        <ul class="sort__orders">
-          <li>
-            <a class="sort__link-order" href="#">По убыванию</a>
+        <ul class="sort__orders sort-orders">
+          <li class="sort-orders__item">
+            <a class="sort__link-order sort__link-order--down sort__link-order--active" href="#"><span class="visually-hidden">По убыванию</span></a>
           </li>
-          <li>
-            <a class="sort__link-order" href="#">По возростанию</a>
+          <li class="sort-orders__item">
+            <a class="sort__link-order sort__link-order--up" href="#"><span class="visually-hidden">По возростанию</span></a>
           </li>
         </ul>
       </section>
@@ -133,17 +131,17 @@
         <ul class="store-list">
           <li class="store-item">
             <div class="store-item__wrapper">
-              <h3>
+              <h3 class="store-item__title">
                 <a class="store-item__link" href="#">Sedona</a>
               </h3>
               <p class="store-item__text">Информационный сайт для туристов</p>
-              <button class="btn" type="button">9 900 РУБ.</button>
+              <button class="btn store-item__btn" type="button">9 900 РУБ.</button>
             </div>
             <img src="img/sedona.jpg" width="360" height="576" alt="Сайт для Sedona">
           </li>
           <li class="store-item">
             <div class="store-item__wrapper">
-              <h3>
+              <h3 class="store-item__title">
                 <a class="store-item__link" href="#">Pink App</a>
               </h3>
               <p class="store-item__text">Продуктовый лендинг приложения для iOS и Android</p>
@@ -153,7 +151,7 @@
           </li>
           <li class="store-item">
             <div class="store-item__wrapper">
-              <h3>
+              <h3 class="store-item__title">
                 <a class="store-item__link" href="#">Barbershop</a>
               </h3>
               <p class="store-item__text">Сайт салона красоты. Для мужчин, да.</p>
@@ -163,7 +161,7 @@
           </li>
           <li class="store-item">
             <div class="store-item__wrapper">
-              <h3>
+              <h3 class="store-item__title">
                 <a class="store-item__link" href="#">Mishka</a>
               </h3>
               <p class="store-item__text">Интернет-магазин вязаных игрушек</p>
@@ -173,7 +171,7 @@
           </li>
           <li class="store-item">
             <div class="store-item__wrapper">
-              <h3>
+              <h3 class="store-item__title">
                 <a class="store-item__link" href="#">A Plus</a>
               </h3>
               <p class="store-item__text">Лендинг курсов повышения квалификации</p>
@@ -183,7 +181,7 @@
           </li>
           <li class="store-item">
             <div class="store-item__wrapper">
-              <h3>
+              <h3 class="store-item__title">
                 <a class="store-item__link" href="#">Кваст</a>
               </h3>
               <p class="store-item__text">Промо-сайт производителя крафтового кваса</p>
@@ -195,27 +193,31 @@
       </section>
       <ul class="pagination">
         <li class="pagination-item"><a class="btn btn--grey pagination-btn pagination-btn--current">1</a></li>
-        <li class="pagination-item"><a class="btn btn--grey" href="#">2</a></li>
-        <li class="pagination-item"><a class="btn btn--grey" href="#">3</a></li>
-        <li class="pagination-item"><a class="btn btn--grey" href="#">Следующая</a></li>
+        <li class="pagination-item"><a class="btn btn--grey pagination-btn" href="#">2</a></li>
+        <li class="pagination-item"><a class="btn btn--grey pagination-btn" href="#">3</a></li>
+        <li class="pagination-item"><a class="btn btn--grey pagination-btn pagination-btn--next" href="#">Следующая</a></li>
       </ul>
     </div>
   </div>
 </main>
 <section class="map">
   <h2 class="visually-hidden">Расположение</h2>
-  <div class="map__container" id="map"></div>
-  <img src="img/map.png" alt="распложение">
+  <!--<div class="map__container" id="map"></div>-->
+  <div class="container-map">
+    <img src="img/map.png" alt="распложение">
+  </div>
   <div class="contacts-wrapper">
-    <div class="contacts">
-      <p class="contacts__title">Nёrds Design Studio</p>
-      <p class="contacts__address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
-      <a class="contacts__tel" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-      <a class="btn" href="write-us.html">Напишите&nbsp;нам</a>
+    <div class="contacts-wrapper-centered container">
+      <div class="contacts">
+        <p class="contacts__title">Nёrds Design Studio</p>
+        <p class="contacts__address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+        <a class="contacts__tel" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+        <a class="btn btn-contacts" href="write-us.html">Напишите&nbsp;нам</a>
+      </div>
     </div>
   </div>
 </section>
-<footer class="footer-main">
+<footer class="footer-main container">
   <div class="social">
     <ul class="social__list">
       <li class="social__item"><a class="social__link" href="#" aria-label="Нёрдс во Вконтакте"></a></li>
@@ -228,7 +230,7 @@
     <p class="action-text">Скидка 10% для друзей из социальных сетей.</p>
   </div>
 </footer>
-<section class="write-us">
+<section class="modal write-us">
   <h2 class="write-us__title">Напишите нам</h2>
   <form method="post" action="https://echo.htmlacademy.ru">
     <p>
