@@ -10,25 +10,25 @@
   <header class="main-header">
     <nav class="main-navigation container">
       <a class="logo" href="/">
-        <img src="img/nerds-logo.svg" width="160" height="65" alt="Лого студии Нёрдс">
+        <img class="logo__img" src="img/nerds-logo.svg" width="160" height="65" alt="Лого студии Нёрдс">
       </a>
       <ul class="header-menu">
-        <li>
-          <a href="#">Студия</a>
+        <li class="header-menu__item">
+          <a class="header-menu__link" href="#">Студия</a>
         </li>
-        <li>
-          <a href="#">Клиенты</a>
+        <li class="header-menu__item">
+          <a class="header-menu__link" href="#">Клиенты</a>
         </li>
-        <li>
-          <a href="catalog.html">Магазин</a>
+        <li class="header-menu__item">
+          <a class="header-menu__link" href="catalog.html">Магазин</a>
         </li>
-        <li>
-          <a href="#">Контакты</a>
+        <li class="header-menu__item">
+          <a class="header-menu__link" href="#">Контакты</a>
         </li>
       </ul>
       <ul class="service-menu">
-        <li>
-          <a class="service-menu__cart" href="#">Корзина</a>
+        <li class="service-menu__item">
+          <a class="service-menu__link service-menu__cart" href="#">Корзина</a>
         </li>
       </ul>
     </nav>
@@ -124,22 +124,22 @@
       <h2 class="visually-hidden">Клиенты</h2>
       <ul class="clients__list">
         <li class="client">
-          <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+          <a class="client__link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
             <img class="client__img" src="img/logo-1.png" width="199" height="68" alt="Клиент: HTML Academy">
           </a>
         </li>
         <li class="client">
-          <a href="">
+          <a class="client__link" href="#">
             <img class="client__img" src="img/logo-2.png" width="209" height="90" alt="Клиент: Барбершоп Бородинский">
           </a>
         </li>
         <li class="client">
-          <a href="">
+          <a class="client__link" href="#">
             <img class="client__img" src="img/logo-3.png" width="185" height="52" alt="Клиент: Pink">
           </a>
         </li>
         <li class="client">
-          <a href="">
+          <a class="client__link" href="#">
             <img class="client__img" src="img/logo-4.png" width="173" height="84" alt="Клиент: Мишка">
           </a>
         </li>
@@ -166,9 +166,9 @@
   <footer class="footer-main container">
     <div class="social">
       <ul class="social__list">
-        <li class="social__item"><a class="social__link" href="#" aria-label="Нёрдс во Вконтакте"></a></li>
-        <li class="social__item"><a class="social__link" href="#" aria-label="Нёрдс в Фейсбуке"></a></li>
-        <li class="social__item"><a class="social__link" href="#" aria-label="Нёрдс в Инстаграме"></a></li>
+        <li class="social__item"><a class="social__link social__link--vk" href="#" aria-label="Нёрдс во Вконтакте"></a></li>
+        <li class="social__item"><a class="social__link social__link--fb" href="#" aria-label="Нёрдс в Фейсбуке"></a></li>
+        <li class="social__item"><a class="social__link social__link--insta" href="#" aria-label="Нёрдс в Инстаграме"></a></li>
       </ul>
     </div>
     <div class="footer-text">
@@ -178,22 +178,22 @@
   </footer>
   <section class="modal write-us">
     <h2 class="write-us__title">Напишите нам</h2>
-    <form method="post" action="https://echo.htmlacademy.ru">
-      <p>
+    <form class="write-us__form" method="post" action="https://echo.htmlacademy.ru">
+      <p class="write-us__group">
         <label class="write-us__label" for="name">Ваше имя:</label>
-        <input class="write-us__input" type="text" id="name" placeholder="Имя Фамилия">
+        <input class="write-us__input write-us__input--error" type="text" id="name" placeholder="Имя Фамилия">
       </p>
-      <p>
+      <p class="write-us__group">
         <label class="write-us__label" for="email">Ваш e-mail:</label>
         <input class="write-us__input" type="text" id="email" placeholder="email@example.com">
       </p>
-      <p>
+      <p class="write-us__textarea">
         <label class="write-us__label" for="text">Текст письма:</label>
         <textarea class="write-us__text" placeholder="В свободной форме" id="text"></textarea>
       </p>
-      <button class="btn" type="submit">Отправить</button>
+      <button class="btn write-us__btn" type="submit">Отправить</button>
     </form>
-    <button type="button">Закрыть</button>
+    <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
   <script src="js/app.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMap"></script>
