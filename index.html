@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Нёрдс</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body>
   <header class="main-header">
@@ -148,9 +148,9 @@
   </main>
   <section class="map">
     <h2 class="visually-hidden">Расположение</h2>
-    <!--<div class="map__container" id="map"></div>-->
+    <div class="map__container" id="map"></div>
     <div class="container-map">
-      <img src="img/map.png" alt="распложение">
+      <img src="img/map.png" width="1440" height="416" alt="распложение">
     </div>
     <div class="contacts-wrapper">
       <div class="contacts-wrapper-centered container">
@@ -181,21 +181,21 @@
     <form class="write-us__form" method="post" action="https://echo.htmlacademy.ru">
       <p class="write-us__group">
         <label class="write-us__label" for="name">Ваше имя:</label>
-        <input class="write-us__input write-us__input--error" type="text" id="name" placeholder="Имя Фамилия">
+        <input class="write-us__input" name="name" type="text" id="name" placeholder="Имя Фамилия">
       </p>
       <p class="write-us__group">
         <label class="write-us__label" for="email">Ваш e-mail:</label>
-        <input class="write-us__input" type="text" id="email" placeholder="email@example.com">
+        <input class="write-us__input" name="email" type="text" id="email" placeholder="email@example.com">
       </p>
       <p class="write-us__textarea">
         <label class="write-us__label" for="text">Текст письма:</label>
-        <textarea class="write-us__text" placeholder="В свободной форме" id="text"></textarea>
+        <textarea class="write-us__text" name="text" placeholder="В свободной форме" id="text"></textarea>
       </p>
       <button class="btn write-us__btn" type="submit">Отправить</button>
     </form>
     <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
-  <script src="js/app.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMap"></script>
+  <script src="js/app.min.js"></script>
   </body>
 </html>
