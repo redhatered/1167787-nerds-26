@@ -42,15 +42,15 @@ document.addEventListener('DOMContentLoaded', function () {
     isStorageSupport = false;
   }
 
-  sliderButtons.forEach(function (sliderButton, key) {
+  Array.prototype.slice.call(sliderButtons).forEach(function (sliderButton, key) {
     sliderButton.addEventListener('click', function (e) {
       e.preventDefault();
 
-      sliderButtons.forEach(function (_sliderButton) {
+      Array.prototype.slice.call(sliderButtons).forEach(function (_sliderButton) {
         _sliderButton.classList.remove(sliderControlsActiveClass);
       });
 
-      sliderItems.forEach(function (sliderItem) {
+      Array.prototype.slice.call(sliderItems).forEach(function (sliderItem) {
         sliderItem.classList.remove(sliderItemActiveClass);
       });
 

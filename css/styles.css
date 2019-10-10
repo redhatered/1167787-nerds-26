@@ -229,6 +229,7 @@ img {
   margin-left: 7px;
   background-color: #ffffff;
   position: relative;
+  cursor: pointer;
 }
 .slider-controls-item:focus {
   outline: none;
@@ -537,6 +538,7 @@ img {
   background-color: #ffffff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .contacts__title {
@@ -871,7 +873,7 @@ img {
 }
 
 .sort__orders {
-  width: 50px;
+  width: 45px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1160,6 +1162,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .inner-page .map {
@@ -1239,6 +1242,7 @@ img {
   padding: 70px 100px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  z-index: 3;
 }
 
 .modal--active {
